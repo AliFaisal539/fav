@@ -49,9 +49,12 @@ h2 {
 }
 
 .intro, .quote {
-    font-size: 1.1em;
-    color: #333;
-    margin: 20px 0;
+    font-size: 1.05em;
+    line-height: 1.9;
+    color: #3b2f2f;
+    text-align: center;
+    letter-spacing: 0.4px;
+    margin-top: 20px;
 }
 
 .btn {
