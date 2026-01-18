@@ -1,66 +1,69 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500;700&display=swap');
 
 body {
     margin: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background: linear-gradient(to bottom, #ffdde1, #ee9ca7);
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
 }
 
 .container {
-    text-align: center;
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(255,255,255,0.9);
     padding: 40px;
     border-radius: 25px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    animation: fadeIn 2s ease;
-}
-
-.herpic {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    border: 5px solid #fff;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-    margin: 20px 0;
-    transition: transform 0.5s;
-}
-
-.herpic:hover {
-    transform: scale(1.1) rotate(5deg);
+    text-align: center;
+    width: 90%;
+    max-width: 420px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    animation: fadeIn 1.5s ease;
 }
 
 h1 {
     font-family: 'Great Vibes', cursive;
-    font-size: 3em;
-    color: #ff4b5c;
-    margin: 0;
+    font-size: 2.8em;
+    color: #c9184a;
+    margin-bottom: 10px;
 }
 
 h2 {
-    font-size: 1.5em;
     color: #6a0572;
-    margin: 10px 0 20px 0;
+    margin-bottom: 20px;
 }
 
-p.intro {
-    font-size: 1.2em;
+.herpic {
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 0 25px rgba(255, 105, 135, 0.7);
+    margin: 20px 0;
+    transition: transform 0.4s ease;
+}
+
+.herpic:hover {
+    transform: scale(1.08);
+}
+
+.intro, .quote {
+    font-size: 1.1em;
     color: #333;
-    margin-bottom: 30px;
+    margin: 20px 0;
 }
 
 .btn {
     display: inline-block;
-    padding: 15px 25px;
-    background: #ff4b5c;
-    color: #fff;
+    margin-top: 20px;
+    padding: 14px 30px;
+    background: #c9184a;
+    color: white;
     text-decoration: none;
-    font-weight: bold;
     border-radius: 50px;
-    transition: all 0.3s ease;
+    font-weight: bold;
+    transition: 0.3s ease;
 }
 
 .btn:hover {
@@ -68,30 +71,27 @@ p.intro {
     transform: scale(1.1);
 }
 
-/* Animation */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-20px);}
-    to { opacity: 1; transform: translateY(0);}
+/* Cake */
+.cake {
+    width: 180px;
+    height: 120px;
+    background: #ff8fab;
+    border-radius: 10px;
+    margin: 20px auto;
+    position: relative;
 }
-.herpic::before, .herpic::after {
-    content: "🌸";
-    font-size: 2em;
+
+.candle {
+    width: 10px;
+    height: 40px;
+    background: white;
     position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.herpic::before {
-    top: -10px;
-    left: -10px;
-    animation: float 3s ease-in-out infinite;
-}
-
-.herpic::after {
-    bottom: -10px;
-    right: -10px;
-    animation: float 4s ease-in-out infinite;
-}
-
-@keyframes float {
-    0%, 100% { transform: translateY(0);}
-    50% { transform: translateY(-10px);}
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(-20px);}
+    to {opacity: 1; transform: translateY(0);}
 }
